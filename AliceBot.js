@@ -1,6 +1,6 @@
 const fs = require(`node:fs`);
 const path = require(`node:path`);
-const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
 const { token } = require('./token.json');
 
 
@@ -10,7 +10,8 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 // When the client is ready, run this code (only once)
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
 client.once(Events.ClientReady, c => {
-    client.user.setActivity('Visual Studio Code', { type: `PLAYING` });
+	client.user.setStatus('dnd');
+	client.user.setActivity('第一代的更新版本 |A_L_I_C_E| Servers ' + client.guilds.cache.size , { type: ActivityType.Watching });
 	console.log(`Ready! Logged in as ${c.user.tag}`);
     
 });

@@ -15,7 +15,7 @@ module.exports = {
 
         const question = interaction.options.getString('query');
         const chance = Math.floor(Math.random() * 100) + 1;
-        const reply = `${question}的機會是 ${chance}%`;
+        const reply = `${question}的機率是 ${chance}%`;
 
         await interaction.reply(reply);
     },
