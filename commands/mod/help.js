@@ -1,11 +1,22 @@
 const { SlashCommandBuilder } = require('discord.js');
+const { EmbedBuilder  } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('help')
+        .setName('help菜單')
         .setDescription('《 伺服器可用指令 》'),
     async execute(interaction) {
-        // 在這裡撰寫處理 "help" 指令的程式碼邏輯
-        await interaction.reply('《 指令說明 》\n =============================\n《 RPG 》\n /exp : 查看目前經驗值 \n /money deposit : 將金錢轉入其他用戶\n/money : 查看自身目前僅有的金錢量\n/userinfo : 角色資訊\n/work : 工作\n=============================\n/modRPG : 啟用RPG功能\n=============================\n 《 help 》指令尚在開發中');
+        const embed = new EmbedBuilder ()
+            .setColor('#9810ff')
+            .setTitle('A_L_I_C_E')
+            .setDescription('人工高適應性知性自律存在')
+            .addFields(
+                { name: '自我檢測執行...', value: '🔨 版本開發進度 15%\n 🎧 音樂系統 X \n ⚔️ RPG系統(開發中) \n 🛠️ MOD管理系統 X \n ... \n ...' },
+                { name: `說明`, value:`此機器人尚在開發當中...`},
+                { name: '版本', value: 'Ver:1.0' }
+            )
+            .setTimestamp();
+
+        await interaction.reply({ embeds: [embed] });
     },
 };
