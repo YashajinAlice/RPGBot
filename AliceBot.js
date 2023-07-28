@@ -1,8 +1,7 @@
-const fs = require(`node:fs`);
-const path = require(`node:path`);
-const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
-const { token } = require('./token.json');
-
+const fs = require('fs');
+const path = require('path');
+const { Client, Collection, Events, GatewayIntentBits, ActivityType, } = require('discord.js');
+const { token } = require('./config.json');
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -37,6 +36,7 @@ client.on(Events.InteractionCreate, async interaction => {
 		}
 	}
 });
+
 
 client.commands = new Collection();
 

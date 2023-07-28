@@ -1,6 +1,10 @@
 # 機器人token
-token.json
+config.json
 # Discord node
 node_modules
 # 快速啟動檔
 open to bot.bat
+# 快速開code
+open CODE.bat
+# 指令註冊
+deploy-commands.bat
