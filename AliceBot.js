@@ -67,7 +67,6 @@ client.on(Events.InteractionCreate, async interaction => {
 	}
 });
 
-
 client.commands = new Collection();
 
 const commandsPath = path.join(__dirname, `commands`);
