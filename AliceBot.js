@@ -1,13 +1,18 @@
+//====================
+//= 作者：Alice       
+//= 版本：1.0.0              
+//= 版本：V14（JS）                
+//= 語言：UTF-8                
+//====================
+
 const fs = require('fs');
 const path = require('path');
 const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
 const { token } = require('./config.json');
 
-//測試
-const MusicBot = require(`./music`);
+const Discord = require(`discord.js`);
 
-const bot = new MusicBot();
-//測試
+const prefix = '!'; // 你可以更改指令前綴符號
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -22,14 +27,27 @@ client.once(Events.ClientReady, c => {
     
 });
 
-
+//音樂框架
+client.on('message', async message => {
+	if (message.author.bot) return;
+	if (!message.content.startsWith(prefix)) return;
   
-  client.on('voiceStateUpdate', (oldState, newState) => {
-	if (oldState.channelID && !newState.channelID) {
-	  bot.checkVoiceChannel(newState.member);
+	const args = message.content.slice(prefix.length).trim().split(' ');
+	const command = args.shift().toLowerCase();
+  
+	if (command === 'play') {
+	  if (!message.member.voice.channel) {
+		return message.channel.send('請先加入語音頻道！');
+	  }
+  
+	  if (!args.length) {
+		return message.channel.send('請輸入要搜尋的音樂名稱或關鍵字！');
+	  }
+  
+	  const searchString = args.join(' ');
+	  execute(message, searchString);
 	}
   });
-
 
 client.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isChatInputCommand()) return;
