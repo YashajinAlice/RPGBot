@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "canvacord": "^5.4.10",
+    "canvas": "^2.11.2",
+    "discord-card-canvas": "^1.4.2",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "spotify-web-api-node": "^5.0.2",
+    "twit": "^2.2.11",
+    "ytdl-core": "^4.11.5",
+    "ytsearcher": "^1.2.4"
+  },
+  "name": "rpgbot",
+  "description": "更新日期：7月31日",
+  "version": "1.0.0",
+  "main": "AliceBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

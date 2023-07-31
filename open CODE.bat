@@ -1,5 +1,0 @@
-@ECHO OFF
-
-code .
-
-exit
