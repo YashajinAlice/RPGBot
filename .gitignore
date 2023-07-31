@@ -8,3 +8,9 @@ open to bot.bat
 open CODE.bat
 # 指令註冊
 deploy-commands.bat
+#gitignore
+.gitignore
+#斜杠註冊
+deploy-commands.js
+#pacoge
+package-lock.json
