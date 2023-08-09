@@ -5,6 +5,8 @@
 //= 語言：UTF-8                
 //====================
 
+
+//導入模組
 const fs = require('fs');
 const path = require('path');
 const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
@@ -15,6 +17,8 @@ const Discord = require(`discord.js`);
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+
+//Discord社群
 
 // When the client is ready, run this code (only once)
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
