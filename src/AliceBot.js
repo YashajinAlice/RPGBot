@@ -7,10 +7,10 @@
 
 
 //導入模組
-const fs = require('fs');
-const path = require('path');
-const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
-const { token } = require('./config.json');
+const fs = require('fs'); //讀寫路徑
+const path = require('path'); //處理路徑
+const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');//引入DC模組
+const { token } = require('./config.json');//從config.json 讀取 token
 
 const Discord = require(`discord.js`);
 
