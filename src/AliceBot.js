@@ -18,7 +18,7 @@ const Discord = require(`discord.js`);
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 
-//Discord社群
+//Discord社群：CatClub
 
 // When the client is ready, run this code (only once)
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
