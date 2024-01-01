@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "canvacord": "^5.4.10",
+    "canvacord": "^6.0.0",
     "canvas": "^2.11.2",
     "discord-card-canvas": "^1.4.2",
     "discord.js": "^14.11.0",
